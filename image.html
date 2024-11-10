@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="image.css">
+    <title>Gallery_App</title>
+</head>
+<body>
+
+<div class="heading">
+    <h1>Photo Gallery</h1>
+</div>
+
+<div class="new" id="fullimgbox" style="display: none;">
+    <img src="" alt="" id="fullimg">
+    <span onclick="closefullimg()">X</span>
+</div>
+
+<div class="gallery">
+    <img src="img1.jpeg" onclick="openfullimg(this.src)">
+    <img src="img2.jpeg" onclick="openfullimg(this.src)">
+    <img src="img3.jpeg" onclick="openfullimg(this.src)">
+    <img src="img4.jpeg" onclick="openfullimg(this.src)">
+    <img src="img5.jpeg" onclick="openfullimg(this.src)">
+    <img src="img6.jpeg" onclick="openfullimg(this.src)">
+    <img src="img7.jpeg" onclick="openfullimg(this.src)">
+    <img src="img8.jpeg" onclick="openfullimg(this.src)">
+    <img src="img9.jpeg" onclick="openfullimg(this.src)">
+</div>
+
+<script>
+    var fullimgbox = document.getElementById("fullimgbox");
+    var fullimg = document.getElementById("fullimg");
+
+    function openfullimg(pic) {
+        fullimg.src = pic; // Set the full image source to the clicked image
+        fullimgbox.style.display = 'flex'; // Use quotes around 'flex'
+    }
+
+    function closefullimg() {
+        fullimgbox.style.display = 'none'; // Hide the full image box
+    }
+</script>
+
+</body>
+</html>
